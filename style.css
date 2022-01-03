@@ -6,21 +6,34 @@
 body{
     min-height: 100vh;
     min-width: 100vh;
-    display: flex;
-    justify-content: center;
+    background-color: #444444;
 }
 main {
+    min-height: 100vh;
+    min-width: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.grid {
     display: flex;
     max-width: 100vh;
     max-height: 100vh;
     flex-wrap: wrap;
 }
-
 .square {
     min-width: 50px;
     min-height: 50px;
-    border: 1px solid red;
+    border: 1px solid black;
 }
 .square:hover {
     background-color: black;
+}
+.reset-btn {
+    padding: 8px 16px;
+    border: 2px solid #B3541E;
+    border-radius: 8px;
+    display: block;
+    background-color: #362222;
+    color: #B3541E;  
 }
