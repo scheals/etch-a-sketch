@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+body{
+    min-height: 100vh;
+    min-width: 100vh;
+    display: flex;
+    justify-content: center;
+}
+main {
+    display: flex;
+    max-width: 100vh;
+    max-height: 100vh;
+    flex-wrap: wrap;
+}
+
+.square {
+    min-width: 50px;
+    min-height: 50px;
+    border: 1px solid red;
+}
+.square:hover {
+    background-color: black;
+}
