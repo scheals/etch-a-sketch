@@ -17,16 +17,13 @@ main {
 }
 .grid {
     display: flex;
-    width: 900px;
-    height: 900px;
+    max-width: 100vh;
+    max-height: 100vh;
     flex-wrap: wrap;
 }
 .square {
-    flex: 1 1 fill;
-    min-width: 5px;
-    min-height: 5px;
-    max-width: 50px;
-    max-height: 50px;
+    min-width: 50px;
+    min-height: 50px;
     border: 1px solid black;
 }
 .square:hover {
