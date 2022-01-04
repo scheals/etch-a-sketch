@@ -27,9 +27,9 @@ main {
     min-width: 5px;
     min-height: 5px;
 }
-.square:hover {
+/* .square:hover {
     background-color: black;
-}
+} */
 .reset-btn {
     padding: 8px 16px;
     border: 2px solid #B3541E;
@@ -42,4 +42,7 @@ main {
     display: flex;
     flex: 1 1 auto;
     width: 900px;
+}
+.random-color {
+    background-color: black;
 }
