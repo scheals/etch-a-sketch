@@ -37,8 +37,16 @@ function squareListener(element) {
     element.addEventListener('mouseover', function() {randomColor(element)});
 }
 function randomColor(element) {
-    let r = Math.floor([Math.random()] * 255);
-    let g = Math.floor([Math.random()] * 255);
-    let b = Math.floor([Math.random()] * 255);
+    if (element.dataset.mouseovers === undefined) {  
+        element.setAttribute('data-mouseovers', 1);
+        console.log(element.dataset.mouseovers)
+    }
+    console.log(element.dataset.mouseovers)
+    let mouseoverCount = +element.dataset.mouseovers;
+    let r = (Math.floor([Math.random()] * 255)) * mouseoverCount;
+    let g = (Math.floor([Math.random()] * 255)) * mouseoverCount;
+    let b = (Math.floor([Math.random()] * 255)) * mouseoverCount;
+    if (mouseoverCount >= 0) mouseoverCount -= 0.1;
+    element.setAttribute('data-mouseovers', mouseoverCount);
     return element.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
 }
