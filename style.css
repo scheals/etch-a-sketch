@@ -20,12 +20,12 @@ main {
     width: 90vh;
     height: 90vh;
     flex-wrap: wrap;
+    border: 2px solid black;
 }
 .square {
     flex: 1 1 content;
     min-width: 5px;
     min-height: 5px;
-    border: 1px solid black;
 }
 .square:hover {
     background-color: black;
