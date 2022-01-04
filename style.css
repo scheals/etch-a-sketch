@@ -17,13 +17,14 @@ main {
 }
 .grid {
     display: flex;
-    max-width: 100vh;
-    max-height: 100vh;
+    width: 90vh;
+    height: 90vh;
     flex-wrap: wrap;
 }
 .square {
-    min-width: 50px;
-    min-height: 50px;
+    flex: 1 1 content;
+    min-width: 5px;
+    min-height: 5px;
     border: 1px solid black;
 }
 .square:hover {
@@ -36,4 +37,9 @@ main {
     display: block;
     background-color: #362222;
     color: #B3541E;  
+}
+.row {
+    display: flex;
+    flex: 1 1 auto;
+    width: 900px;
 }
