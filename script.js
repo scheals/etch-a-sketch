@@ -1,7 +1,9 @@
 const button = document.querySelector('.reset-btn');
 const buttonListener = button.addEventListener('click', function () {resetGrid()});
+
 createGrid(16);
 squareMagic();
+
 function resetGrid () {
     const gridContainer = document.querySelector('.grid');
     while (gridContainer.firstChild) {
@@ -33,9 +35,11 @@ function squareMagic () {
     const square = document.querySelectorAll('.square');
     square.forEach(element => squareListener(element));
 }
+
 function squareListener(element) {
     element.addEventListener('mouseover', function() {randomColor(element)});
 }
+
 function randomColor(element) {
     if (element.dataset.mouseovers === undefined) {  
         element.setAttribute('data-mouseovers', 1);

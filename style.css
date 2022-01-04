@@ -22,14 +22,16 @@ main {
     flex-wrap: wrap;
     border: 2px solid black;
 }
+.row {
+    display: flex;
+    flex: 1 1 auto;
+    width: 900px;
+}
 .square {
     flex: 1 1 content;
     min-width: 5px;
     min-height: 5px;
 }
-/* .square:hover {
-    background-color: black;
-} */
 .reset-btn {
     padding: 8px 16px;
     border: 2px solid #B3541E;
@@ -37,12 +39,4 @@ main {
     display: block;
     background-color: #362222;
     color: #B3541E;  
-}
-.row {
-    display: flex;
-    flex: 1 1 auto;
-    width: 900px;
-}
-.random-color {
-    background-color: black;
 }
