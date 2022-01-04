@@ -3,9 +3,9 @@ const buttonListener = button.addEventListener('click', function () {resetGrid()
 createGrid(16);
 squareMagic();
 function resetGrid () {
-    const divRow = document.querySelector('.grid');
-    while (divRow.firstChild) {
-        divRow.removeChild(divRow.firstChild);
+    const gridContainer = document.querySelector('.grid');
+    while (gridContainer.firstChild) {
+        gridContainer.removeChild(gridContainer.firstChild);
     }
     let squareNumber = +prompt("How many squares per row & column?", "Accepted range: 0-100");
     createGrid(squareNumber);
@@ -39,14 +39,12 @@ function squareListener(element) {
 function randomColor(element) {
     if (element.dataset.mouseovers === undefined) {  
         element.setAttribute('data-mouseovers', 1);
-        console.log(element.dataset.mouseovers)
     }
-    console.log(element.dataset.mouseovers)
-    let mouseoverCount = +element.dataset.mouseovers;
-    let r = (Math.floor([Math.random()] * 255)) * mouseoverCount;
-    let g = (Math.floor([Math.random()] * 255)) * mouseoverCount;
-    let b = (Math.floor([Math.random()] * 255)) * mouseoverCount;
-    if (mouseoverCount >= 0) mouseoverCount -= 0.1;
-    element.setAttribute('data-mouseovers', mouseoverCount);
-    return element.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+    let mouseoverMultiplier = +element.dataset.mouseovers;
+    let h = (Math.floor([Math.random()] * 360));
+    let s = (Math.floor([Math.random()] * 100));
+    let l = (Math.floor([Math.random()] * 100)) * mouseoverMultiplier;
+    if (mouseoverMultiplier > 0) mouseoverMultiplier -= 0.1;
+    element.setAttribute('data-mouseovers', mouseoverMultiplier);
+    return element.style.backgroundColor = `hsl(${h}, ${s}%, ${l}%)`;
 }
